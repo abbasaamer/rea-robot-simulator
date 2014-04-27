@@ -28,10 +28,10 @@ public class Robot {
 	 * Valid location is within valid values of X and Y coordinates
 	 * Valid face is one of valid directions
 	 * 
-	 * @param x - x coordinate of Robot's location
-	 * @param y - y coordinate of Robot's location
-	 * @param face - Robot's direction
-	 * @return - true if Robot is successfully placed on the table
+	 * @param x x coordinate of the location to place the robot
+	 * @param y y coordinate of the location to place the robot
+	 * @param face Robot's direction
+	 * @return true if Robot is successfully placed on the table
 	 * @
 	 */
 	public boolean place(int x, int y, String face){
@@ -54,7 +54,7 @@ public class Robot {
 	}
 		
 	/**
-	 * @return - Report Robot's current location
+	 * @return Robot's current location coordinates and direction
 	 */	
 	public String getLocation(){
 		return "Location: "+this.x+","+this.y+","+this.face;
@@ -64,7 +64,7 @@ public class Robot {
 	 * Turn the Robot to RIGHT or LEFT
 	 * and update the Direction
 	 * 
-	 * @param command - RIGHT or LEFT
+	 * @param command RIGHT or LEFT
 	 * */
 	public void changeDirection(String command){
 		if(command.toUpperCase().equals("LEFT") || command.toUpperCase().equals("RIGHT")){
@@ -126,10 +126,18 @@ public class Robot {
 		}
 	}
 	
+	/**
+	 * To check if Robot is placed on the table
+	 * @return true if Robot is placed on the table
+	 */
 	public boolean isPlaced() {
 		return placed;
 	}
 
+	/**
+	 * 
+	 * @param placed true if Robot is successfully placed on the table
+	 */
 	public void setPlaced(boolean placed) {
 		this.placed = placed;
 	}
